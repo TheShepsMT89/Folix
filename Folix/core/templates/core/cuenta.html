@@ -11,13 +11,15 @@
     </head>
     <body>
         <header>
-            <img src="{% static 'core/img/icon.png' %}"
-                 alt="Icon"
-                 height="8%"
-                 width="8%"
-                 class="logo" />
+            <a href="{% url 'home' %}">
+                <img src="{% static 'core/img/icon.png' %}"
+                     alt="Icon"
+                     height="25%"
+                     width="25%"
+                     class="logo" />
+            </a>
             <nav class = "navegacion">
-                <a href="#">Inicio</a>
+                <a href="{% url 'home' %}">Inicio</a>
                 <a href="#">Temas</a>
                 <a href="#">Juegos</a>
                 <a href="#">Integrantes</a>
@@ -32,56 +34,63 @@
         </section>
         <aside id = "l_derecho">
             <form action="DjangoUrl1" class = "login">
-                <h1 class = "titulo">Iniciar sesión</h1>
-                <br />
-                <label>Usuario o correo electrónico</label>
-                <input type="text"required />
-                <br />
-                <br />
-                <label>Contraseña</label>
-                <input type="text" required />
-                <br />
-                <br />
-                <div class="btnInicioSesion">
-                    <button type="submit">Iniciar Sesión</button>
+                <div class = "login-body">
+                    <br />
+                    <h1 class = "titulo">Iniciar sesión</h1>
+                    <br />
+                    <label>Usuario o correo electrónico</label>
+                    <input type="text"required />
+                    <br />
+                    <br />
+                    <label>Contraseña</label>
+                    <input type="text" required />
+                    <br />
+                    <br />
+                    <div class="btnInicioSesion">
+                        <button type="submit">Iniciar Sesión</button>
+                    </div>
+                    <br />
+                    <p>
+                        ¿No tienes una cuenta?  <span id = "registro">Registrate</span>
+                    </p>
+                    <br />
                 </div>
-                <br />
-                <p>
-                    ¿No tienes una cuenta?  <span id = "registro">Registrate</span>
-                </p>
             </form>
         </aside>
         <aside id = "l_izquierdo">
             <form action="DjangoUrl2" class = "registro">
-                <h1 class = "titulo">Registrarse</h1>
-                <br />
-                <label for="">Nombres</label>
-                <input type="text" required />
-                <br />
-                <br />
-                <label for="">Apellidos</label>
-                <input type="text" required />
-                <br />
-                <br />
-                <label for="">Usuario</label>
-                <input type="text" required />
-                <br />
-                <br />
-                <label for="">Correo electrónico</label>
-                <input type="email" required />
-                <br />
-                <br />
-                <label for="">Contraseña</label>
-                <input type="text" />
-                <br />
-                <br />
-                <div class="btnRegistro">
-                    <button type="submit">Registrarse</button>
+                <div class = "registro-body">
+                    <h1 class = "titulo">Registrarse</h1>
+                    <br />
+                    <div class="registro-linea">
+                        <label for="">Nombres</label>
+                        <input class = "inputLinea1" type="text" required />
+                        <label for="">Apellidos</label>
+                        <input class = "inputLinea2" type="text" required />
+                    </div>
+                    <div class="registro-columna">
+                        <br />
+                        <br />
+                        <label for="">Usuario</label>
+                        <input type="text" required />
+                        <br />
+                        <br />
+                        <label for="">Correo electrónico</label>
+                        <input type="email" required />
+                        <br />
+                        <br />
+                        <label for="">Contraseña</label>
+                        <input type="password" />
+                        <br />
+                        <div class="btnRegistro">
+                            <button type="submit">Registrarse</button>
+                        </div>
+                        <br />
+                        <p>
+                            ¿Ya tienes una cuenta?  <span id = "boton2">Iniciar sesión</span>
+                        </p>
+                    </div>
                 </div>
-                <br />
-                <p>
-                    ¿Ya tienes una cuenta?  <span id = "boton2">Iniciar sesión</span>
-                </p>
             </form>
         </aside>
     </body>

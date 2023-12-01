@@ -25,6 +25,11 @@
   }
 }
 
+:root {
+  --border-color: linear-gradient(to right, #f41d1dab 0%, #ff6060ab 100%);
+  --font-color: rgba(255, 255, 255, 0.9);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -130,12 +135,12 @@ h1 {
 }
 
 .FOLIX:hover {
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  transition: 0.5s;
   color: #18568c;
+  -o-transition: 3s;
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  transition: 3s;
 }
 
 #l_derecho {
@@ -143,7 +148,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 30vw;
+  width: 35vw;
   justify-content: center;
   align-items: center;
   display: none;
@@ -153,20 +158,15 @@ h1 {
   position: absolute;
   display: flex;
   height: auto;
-  width: 30vw;
+  width: 35vw;
   justify-content: center;
   align-items: center;
   display: none;
 }
 
-label {
-  display: flex;
-  width: auto;
-  text-align: center;
-  justify-content: center;
-}
-
 .titulo {
+  text-transform: uppercase;
+  font-weight: bold;
   justify-content: center;
   text-align: center;
   font-size: 40px;
@@ -187,7 +187,9 @@ input {
   border-color: black;
   justify-content: center;
   background-color: transparent;
-  width: 100%;
+  width: 55%;
+  height: 20px;
+  padding-left: 5px;
 }
 
 span:hover {
@@ -230,6 +232,57 @@ button {
   width: 140px;
   border-radius: 5px;
   background-color: rgba(255, 117, 0, 0.5);
+}
+
+.registro {
+  padding: 20px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  background: var(--border-color);
+}
+
+.login {
+  padding: 20px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  background: var(--border-color);
+}
+
+.registro-body {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--font-color);
+}
+
+.registro-linea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.inputLinea1 {
+  margin-right: 15px;
+}
+
+.registro-columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-body {
+  background-color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
 }
 
 /*.login {
@@ -304,19 +357,9 @@ button {
   border-radius: 20px;
 }*/
 
-.registro {
-  padding: 20px;
-  border-radius: 10px;
-}
-
 p {
   justify-content: center;
   text-align: center;
-}
-
-input {
-  height: 25px;
-  padding-left: 5px;
 }
 
 input:focus {

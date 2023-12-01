@@ -9,26 +9,34 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 import pymysql
-
-pymysql.install_as_MySQLdb()
-
+import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+# Environ Init
+
+env = environ.Env()
+
+environ.Env.read_env()
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-eqo4^%!4810z9y$^oq358%8hm-xzpwm(0jzm2%tq3*wl^592y!"
+
+SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = env.bool("DEBUG", default=False)
+
+ALLOWED_HOSTS = tuple(env.list("ALLOWED_HOSTS", default=[]))
 
 
 # Application definition
@@ -77,17 +85,18 @@ WSGI_APPLICATION = "folix.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "freedb_folix_db",
-        "USER": "freedb_folix_root",
-        "PASSWORD": f"7Cyk$X64v2D%EZ?",
-        "HOST": "sql.freedb.tech",
-        "PORT": "3306",
+        "ENGINE": env("DB_ENGINE"),
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "PASSWORD": env("DB_PASSWORD"),
+        "HOST": env("DB_HOST"),
+        "PORT": env("DB_PORT"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

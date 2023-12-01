@@ -26,5 +26,5 @@ btnRegistro.addEventListener("click", function () {
 });
 
 btnLogin2.addEventListener("click", function () {
-  AparecerRegistro(registro, textoPrincipal);
+  AparecerLogin(login, textoPrincipal);
 });

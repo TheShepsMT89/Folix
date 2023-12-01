@@ -183,6 +183,7 @@ label {
 
 input {
   font-size: 14px;
+  text-align: center;
   border-width: 0px 0px 1px 0px;
   border-color: black;
   justify-content: center;
@@ -214,12 +215,14 @@ span:hover {
 
 .btnInicioSesion {
   display: flex;
+  height: 20%;
   width: 100%;
   justify-content: center;
 }
 
 .btnRegistro {
   display: flex;
+  height: 20%;
   width: 100%;
   justify-content: center;
 }
@@ -229,7 +232,7 @@ button {
   font-size: 15px;
   font-weight: bold;
   height: 30px;
-  width: 140px;
+  width: 55%;
   border-radius: 5px;
   background-color: rgba(255, 117, 0, 0.5);
 }
@@ -263,7 +266,7 @@ button {
   align-items: center;
 }
 .inputLinea1 {
-  margin-right: 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .registro-columna {
@@ -364,4 +367,6 @@ p {
 
 input:focus {
   outline: none;
+  border-width: 0px 0px 2px 0px;
+  border-color: rgb(255, 60, 0);
 }

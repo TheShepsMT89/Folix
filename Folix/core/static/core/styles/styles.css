@@ -173,6 +173,7 @@ h1 {
 }
 
 label {
+  margin-right: 15px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -262,8 +263,13 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+
 .inputLinea1 {
-  margin-right: 15px;
+  margin: 0px 20px 0px 20px;
+}
+
+.inputLinea2 {
+  margin: 0px 20px 0px 20px;
 }
 
 .registro-columna {

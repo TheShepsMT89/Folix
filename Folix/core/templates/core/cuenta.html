@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Folix - ¡Aprender inglés nunca fue tan divertido!</title>
+        <!-- Estilos y Recursos -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'core/styles/styles.css' %}" />
+        <link rel="icon" href="{% static 'core/img/icon.png' %}" />
+    </head>
+    <body>
+        <header>
+            <img src="{% static 'core/img/icon.png' %}"
+                 alt="Icon"
+                 height="8%"
+                 width="8%"
+                 class="logo" />
+            <nav class = "navegacion">
+                <a href="#">Inicio</a>
+                <a href="#">Temas</a>
+                <a href="#">Juegos</a>
+                <a href="#">Integrantes</a>
+                <button class = "btn" id = "boton">Iniciar Sesión</button>
+            </nav>
+        </header>
+        <div class = "fondo"></div>
+        <section class="tracking-in-expand">
+            <h1 class = "bienvenida" id = "bienvenida">
+                BIENVENIDOS A <span class="FOLIX">FOLIX</span>
+            </h1>
+        </section>
+        <aside id = "l_derecho">
+            <form action="DjangoUrl1" class = "login">
+                <h1 class = "titulo">Iniciar sesión</h1>
+                <br />
+                <label>Usuario o correo electrónico</label>
+                <br />
+                <input type="text"required />
+                <br />
+                <br />
+                <label>Contraseña</label>
+                <br />
+                <input type="text" required />
+                <br />
+                <br />
+                <button type="submit">Iniciar Sesión</button>
+                <p>
+                    ¿No tienes una cuenta?  <span id = "registro">Registrate</span>
+                </p>
+            </form>
+        </aside>
+        <aside id = "l_izquierdo">
+            <form action="DjangoUrl2" class = "registro">
+                <h1 class = "titulo">Registrarse</h1>
+                <br />
+                <label for="">Nombres</label>
+                <br />
+                <input type="text" required />
+                <br />
+                <br />
+                <label for="">Apellidos</label>
+                <br />
+                <input type="text" required />
+                <br />
+                <br />
+                <label for="">Usuario</label>
+                <br />
+                <input type="text" required />
+                <br />
+                <br />
+                <label for="">Correo electrónico</label>
+                <br />
+                <input type="email" required />
+                <br />
+                <br />
+                <label for="">Contraseña</label>
+                <br />
+                <input type="text" />
+                <button type="submit">Registrarse</button>
+                <p>
+                    ¿Ya tienes una cuenta?  <span id = "boton2">Iniciar sesión</span>
+                </p>
+            </form>
+        </aside>
+    </body>
+    <script src="{% static 'core/js/script.js' %}"></script>
+</html>

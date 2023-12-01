@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist/GeistVariableVF.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s linear both;
+  animation: tracking-in-expand 0.7s linear both;
+  color: #163755;
+  font-family: "Times New Roman";
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.2em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/sunset_wallpaper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Geist";
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 20px 50px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.navegacion a {
+  position: relative;
+  font-size: 1.4rem;
+  color: white;
+  width: 80vw;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  background-color: white;
+  -o-transform: scaleX(0);
+  transform-origin: right;
+  -o-transition: transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.navegacion .btn {
+  width: 135px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 40px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.navegacion .btn:hover {
+  color: black;
+  -o-transition: 0.3s;
+  background-color: white;
+  -moz-box-shadow: 0px 0px 37px 2px rgba(255, 117, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 37px 2px rgba(255, 117, 0, 0.75);
+  box-shadow: 0px 0px 37px 2px rgba(255, 117, 0, 0.75);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.FOLIX:hover {
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+  color: #18568c;
+}
+
+#l_derecho {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 30vw;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#l_izquierdo {
+  position: absolute;
+  display: flex;
+  height: auto;
+  width: 30vw;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+label {
+  display: flex;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.titulo {
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.login.active-btn {
+  color: aqua;
+}
+
+.registro {
+  padding: 5px;
+}
+
+input {
+  font-size: 14px;
+  border-width: 0px 0px 1px 0px;
+  border-color: black;
+  justify-content: center;
+  width: 100%;
+}
+
+span:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tracking-in-expand {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+#registro {
+  cursor: pointer;
+}
+
+#boton2 {
+  cursor: pointer;
+}

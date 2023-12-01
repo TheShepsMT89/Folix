@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "folix"
+version = "0.1.0"
+description = "Una app para aprender inglés."
+authors = ["Santisteban, Huayra, Laura, Quispe Coa"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2.7"
+pillow = "^10.1.0"
+pymysql = "^1.1.0"
+cryptography = "^41.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

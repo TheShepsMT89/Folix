@@ -32,8 +32,8 @@
                 BIENVENIDOS A <span class="FOLIX">FOLIX</span>
             </h1>
         </section>
-        <aside id = "l_derecho">
-            <form action="DjangoUrl1" class = "login">
+        <section id = "l_derecho">
+            <form action="{% url 'home' %}" class = "login">
                 <div class = "login-body">
                     <br />
                     <h1 class = "titulo">Iniciar sesión</h1>
@@ -56,10 +56,11 @@
                     <br />
                 </div>
             </form>
-        </aside>
-        <aside id = "l_izquierdo">
-            <form action="DjangoUrl2" class = "registro">
+        </section>
+        <section id = "l_izquierdo">
+            <form action="{% url 'home' %}" class = "registro">
                 <div class = "registro-body">
+                    <br />
                     <h1 class = "titulo">Registrarse</h1>
                     <br />
                     <div class="registro-linea">
@@ -89,10 +90,12 @@
                         <p>
                             ¿Ya tienes una cuenta?  <span id = "boton2">Iniciar sesión</span>
                         </p>
+                        <br />
                     </div>
                 </div>
             </form>
-        </aside>
+        </section>
+        <!-- Hasta aca es la pagina de inicio pes -->
     </body>
     <script src="{% static 'core/js/script.js' %}"></script>
 </html>

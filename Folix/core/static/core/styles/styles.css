@@ -6,8 +6,8 @@
 }
 
 .tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s linear both;
-  animation: tracking-in-expand 0.7s linear both;
+  -webkit-animation: tracking-in-expand 0.6s linear both;
+  animation: tracking-in-expand 0.6s linear both;
   color: #163755;
   font-family: "Times New Roman";
 }
@@ -22,6 +22,73 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.blur-in {
+  animation: blur-in 0.4s linear both;
+}
+@keyframes blur-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.blur-in-expand {
+  -webkit-animation: blur-in-expand 0.3s linear both;
+  animation: blur-in-expand 0.3s linear both;
+}
+
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.25s;
+  animation: scale-up-center 0.25s;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale-down-blur-center {
+  -webkit-animation: scale-down-blur-center 0.38s;
+  animation: scale-down-blur-center 0.38s;
+}
+@keyframes scale-down-blur-center {
+  0% {
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0.01px);
+    filter: blur(0.01px);
+  }
+  100% {
+    transform: scale(0.5);
+    -webkit-filter: blur(12px);
+    opacity: 0;
+    filter: blur(12px);
   }
 }
 
@@ -165,7 +232,7 @@ h1 {
 }
 
 .titulo {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-weight: bold;
   justify-content: center;
   text-align: center;
@@ -207,10 +274,12 @@ span:hover {
 
 #registro {
   cursor: pointer;
+  font-weight: bold;
 }
 
 #boton2 {
   cursor: pointer;
+  font-weight: bold;
 }
 
 .btnInicioSesion {
@@ -370,3 +439,5 @@ input:focus {
   border-width: 0px 0px 2px 0px;
   border-color: rgb(255, 60, 0);
 }
+
+/* Fin de pagina de inicio, inicio de temas y juegos*/

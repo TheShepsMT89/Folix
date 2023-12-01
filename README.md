@@ -11,3 +11,5 @@ No solo aprenderás un idioma, sino que te sumerge en una experiencia de aprendi
 ![Folix](Folix/core/static/core/img/folix.png)
 
 **Folix, ¡Aprender inglés nunca fue tan divertido!**
+
+abel se la come con canela

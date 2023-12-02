@@ -5,13 +5,13 @@ const btnLogin = document.getElementById("boton");
 const btnRegistro = document.getElementById("registro");
 const btnLogin2 = document.getElementById("boton2");
 
-function AparecerLogin(login) {
+function AparecerLogin() {
   login.classList.add("scale-up-center");
   login.style.display = "block";
   registro.style.display = "none";
 }
 
-function AparecerRegistro(registro) {
+function AparecerRegistro() {
   registro.classList.add("scale-up-center");
   login.style.display = "none";
   registro.style.display = "block";
@@ -22,6 +22,13 @@ function DesaparecerBienvenida() {
   textoPrincipal.classList.add("scale-down-blur-center");
   setTimeout(function () {
     bienvenida.style.display = "none";
+  }, 360);
+}
+
+function DesaparecerRegistro() {
+  registro.classList.add("scale-down-blur-center");
+  setTimeout(function () {
+    registro.style.display = "none";
   }, 360);
 }
 

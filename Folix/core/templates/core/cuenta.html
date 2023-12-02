@@ -20,7 +20,7 @@
             </a>
             <nav class = "navegacion">
                 <a href="{% url 'home' %}">Inicio</a>
-                <a href="#">Temas</a>
+                <a href="#" id = "btnTemas">Temas</a>
                 <a href="#">Juegos</a>
                 <a href="#">Integrantes</a>
                 <button class = "btn" id = "boton">Iniciar Sesión</button>
@@ -29,7 +29,7 @@
         <div class = "fondo"></div>
         <section class="tracking-in-expand">
             <h1 class = "bienvenida" id = "bienvenida">
-                BIENVENIDOS A <span class="FOLIX">FOLIX</span>
+                BIENVENIDO A <span class="FOLIX">FOLIX</span>
             </h1>
         </section>
         <section id = "l_derecho">
@@ -61,7 +61,7 @@
             </form>
         </section>
         <section id = "l_izquierdo">
-            <form action="{% url 'home' %}" class = "registro">
+            <form class = "registro">
                 <div class = "registro-body">
                     <br />
                     <h1 class = "titulo">Registrarse</h1>
@@ -91,7 +91,7 @@
                         <input type="password" required />
                         <br />
                         <div class="btnRegistro">
-                            <button type="submit">Registrarse</button>
+                            <button type="submit" id="registrarse">Registrarse</button>
                         </div>
                         <br />
                         <p>
@@ -101,6 +101,9 @@
                     </div>
                 </div>
             </form>
+        </section>
+        <section id = "SeccionTemas">
+            <h2>JAIRO SE LA COMEEEEE</h2>
         </section>
         <!-- Hasta aca es la pagina de inicio pes -->
     </body>
